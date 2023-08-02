@@ -1,0 +1,9 @@
+# Path
+path: ./cars
+train: images/train
+val: images/valid
+
+# Class
+nc: 1
+# name of class    
+names: ['car']
