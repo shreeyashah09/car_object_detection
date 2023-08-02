@@ -2,7 +2,7 @@ import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
 
-model_path = 'car_object_detection\yolov8n.pt'  # Replace with the path to your YOLOv8 model weights
+model_path = 'car_object_detection\best.pt'  # Replace with the path to your YOLOv8 model weights 
 yolo = YOLO(model_path)
 
 # Setting page layout
