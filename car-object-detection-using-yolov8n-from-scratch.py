@@ -9,9 +9,9 @@ import yaml
 import glob
 from sklearn.model_selection import train_test_split
 
-from IPython.display import Image, clear_output, display, get_ipython
+from IPython.display import Image, clear_output, display
 import matplotlib.pyplot as plt
-from IPython import display
+from IPython import display, get_ipython
 display.clear_output()
 
 import ultralytics
