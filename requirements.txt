@@ -222,3 +222,4 @@ streamlit-toggle-switch==1.0.2
 streamlit-vertical-slider==1.0.2
 ultralytics==8.0.145
 dill==0.3.3
+library_name==version
