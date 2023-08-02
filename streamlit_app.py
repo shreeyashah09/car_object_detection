@@ -2,8 +2,10 @@ import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
 
-model_path = 'car_object_detection\yolov8n.pt'  # Replace with the path to your YOLOv8 model weights
+model_path = 'best.pt'  # Replace with the path to your YOLOv8 model weights 
 yolo = YOLO(model_path)
+
+# C:\Users\ks010\Desktop\GBC\13. Deep Learning II\Project - Car Object Detection\car_object_detection\best.pt
 
 # Setting page layout
 st.set_page_config(
