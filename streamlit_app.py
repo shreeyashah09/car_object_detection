@@ -6,7 +6,7 @@ model_path = 'best.pt'  # Replace with the path to your YOLOv8 model weights
 yolo = YOLO(model_path)
 
 # C:\Users\ks010\Desktop\GBC\13. Deep Learning II\Project - Car Object Detection\car_object_detection\best.pt
-
+'''
 # Setting page layout
 st.set_page_config(
     page_title=" Car Object Detection",
@@ -32,3 +32,4 @@ if source_img is not None:
 
     # Display the original image with bounding boxes around detected objects
     st.image(results.render()[0])
+'''
