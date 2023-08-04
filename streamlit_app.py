@@ -3,10 +3,9 @@ import cv2
 import numpy as np
 from PIL import Image
 from ultralytics import YOLO
-import torch
 
 # Load the YOLOv8 model with the best weights
-def load_yolov8_model():
+def load_model():
     model = YOLO('best.pt')
     return model 
 
@@ -32,7 +31,7 @@ def main():
         image_cv = np.array(image)
 
         # Load YOLOv8 model (call the loading function you have)
-        model = load_yolov8_model()
+        model = load_model()
 
         # Detect objects using YOLOv8
         results = detect_objects_yolov8(image_cv, model)
@@ -50,7 +49,7 @@ def main():
         detected_image_pil = Image.fromarray(detected_image)
 
         # Display the detected image
-        st.image(detected_image, caption="Detected Objects", use_column_width=True)
+        st.image(detected_image_pil, caption="Detected Objects", use_column_width=True)
 
 if __name__ == "__main__":
     main()
