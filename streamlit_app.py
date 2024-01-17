@@ -38,12 +38,11 @@ def main():
 
         # Draw bounding boxes on the image
         detected_image = image_cv.copy()
-        for result in results.pred:
-            for box in result[:, :4]:
-                x_min, y_min, x_max, y_max = box
-                color = (0, 255, 0)  # Green color for bounding boxes
-                thickness = 2
-                cv2.rectangle(detected_image, (x_min, y_min), (x_max, y_max), color, thickness)
+        for result in results.xyxy[0]:
+            x_min, y_min, x_max, y_max, _ = result
+            color = (0, 255, 0)  # Green color for bounding boxes
+            thickness = 2
+            cv2.rectangle(detected_image, (int(x_min), int(y_min)), (int(x_max), int(y_max)), color, thickness)
 
         # Convert back to PIL format for displaying
         detected_image_pil = Image.fromarray(detected_image)
